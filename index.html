@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP3 File</title>
+    <title>Friends and Family Photos</title>
 </head>
 <body>
-    <h1>Welcome to the MP3 File Project</h1>
-    <p>Please use the following password to access the file: 765</p>
+    <h1>Friends Photos</h1>
+    <ul>
+        <li><img src="friend1.jpg" alt="Friend 1"><p>Friend 1</p></li>
+        <li><img src="friend2.jpg" alt="Friend 2"><p>Friend 2</p></li>
+    </ul>
+    <h1>Family Photos (Password Protected)</h1>
+    <form action="/submit-password" method="POST">
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="family-photos" style="display:none;">
+        <ul>
+            <li><img src="family1.jpg" alt="Family 1"><p>Family 1</p></li>
+            <li><img src="family2.jpg" alt="Family 2"><p>Family 2</p></li>
+        </ul>
+    </div>
+    <script>
+        document.querySelector('form').onsubmit = function(event) {
+            event.preventDefault();
+            var password = document.getElementById('password').value;
+            if (password === '765') {
+                document.getElementById('family-photos').style.display = 'block';
+            } else {
+                alert('Incorrect Password!');
+            }
+        };
+    </script>
 </body>
 </html>
