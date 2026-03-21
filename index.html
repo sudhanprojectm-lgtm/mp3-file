@@ -3,35 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
+    <title>MP3 File</title>
 </head>
 <body>
-    <h1>Public Photos</h1>
-    <div class="public-photos">
-        <!-- Add public photos here -->
-    </div>
-
-    <h1>Private Folder</h1>
-    <form onsubmit="return validatePassword()">
-        <label for="password">Enter Password:</label>
-        <input type="password" id="password" required>
-        <button type="submit">Access</button>
-    </form>
-    <div id="private-content" style="display:none;">
-        <h2>Private Photos</h2>
-        <!-- Add private photos here -->
-    </div>
-
-    <script>
-        function validatePassword() {
-            var password = document.getElementById('password').value;
-            if (password === 'your_password_here') { // Change 'your_password_here' to your actual password
-                document.getElementById('private-content').style.display = 'block';
-            } else {
-                alert('Incorrect password!');
-            }
-            return false;
-        }
-    </script>
+    <h1>Welcome to the MP3 File Project</h1>
+    <p>Please use the following password to access the file: 765</p>
 </body>
 </html>
